@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Guleria | Full Stack Developer</title>
+    <meta name="description" content="Professional portfolio of Ayush Guleria - Passionate Full Stack Developer creating modern web applications.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #0071e3, #2997ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-bar {
+            transition: width 0.5s ease-in-out;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #0071e3;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#hero" class="text-xl font-semibold text-gray-900 flex items-center">
+                    <span class="text-2xl font-bold gradient-text">AG</span>
+                </a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium">About</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium">Contact</a>
+                </div>
+                
+                <button class="md:hidden text-gray-500 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-900">
+                        Hi, I'm <span class="gradient-text">Ayush Guleria</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-medium text-gray-600">
+                        Full Stack Developer
+                    </h2>
+                    <p class="text-lg text-gray-500 max-w-lg">
+                        Building innovative web applications with modern technologies. 
+                        Passionate about creating seamless user experiences and robust backend systems.
+                    </p>
+                    <div class="flex space-x-4 pt-4">
+                        <a href="#projects" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors duration-300">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-colors duration-300">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-300 rounded-3xl -rotate-6 filter blur-lg opacity-30"></div>
+                    <div class="relative bg-white p-1 rounded-3xl shadow-xl">
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/89d6a988-4e67-4aeb-8b7f-026d6c581066.png" 
+                            alt="Developer workspace with multiple monitors displaying code, laptop and smartphone on wooden desk with coffee mug" 
+                            class="rounded-2xl w-full h-auto object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">My Skills</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    Technologies I work with to build modern web applications
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 flex flex-col items-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-js text-3xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">JavaScript</h3>
+                    <p class="text-gray-500 text-center text-sm">Advanced knowledge of modern JS and ES6+ features</p>
+                </div>
+                
+                <!-- Skill Card 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 flex flex-col items-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-react text-3xl text-blue-500"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">React</h3>
+                    <p class="text-gray-500 text-center text-sm">Experience building complex SPAs with React</p>
+                </div>
+                
+                <!-- Skill Card 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 flex flex-col items-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-node-js text-3xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Node.js</h3>
+                    <p class="text-gray-500 text-center text-sm">Building scalable backend services and APIs</p>
+                </div>
+                
+                <!-- Skill Card 4 -->
+                <div class="bg-gray-50 rounded-xl p-6 flex flex-col items-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-database text-3xl text-indigo-500"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Databases</h3>
+                    <p class="text-gray-500 text-center text-sm">MongoDB, PostgreSQL, Firebase experience</p>
+                </div>
+            </div>
+            
+            <!-- Skill Bars -->
+            <div class="mt-16 space-y-6 max-w-3xl mx-auto">
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-700">Frontend Development</span>
+                        <span class="text-sm font-medium text-gray-500">95%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-700">Backend Development</span>
+                        <span class="text-sm font-medium text-gray-500">85%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-700">UI/UX Design</span>
+                        <span class="text-sm font-medium text-gray-500">80%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-700">DevOps</span>
+                        <span class="text-sm font-medium text-gray-500">75%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    Selected works demonstrating my skills and expertise
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md project-card transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cd935b77-6ee9-4693-a098-6f10a886fe47.png" 
+                            alt="Modern e-commerce dashboard showing sales analytics, graphs and product listings" 
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">E-Commerce Platform</h3>
+                        <p class="text-gray-500 mb-4">
+                            Full-featured online store with React, Redux, and Node.js backend.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">React</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md project-card transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c30aeaeb-e6f1-45cc-b7af-8f1d8f953b2f.png" 
+                            alt="Task management application interface showing kanban board with colorful task cards" 
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Task Management App</h3>
+                        <p class="text-gray-500 mb-4">
+                            Real-time collaborative task management with drag-and-drop interface.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">React</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">TypeScript</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md project-card transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5369ffa9-3e5b-4221-857f-11899311c468.png" 
+                            alt="Mobile and desktop views of a travel booking application showing flight search interface" 
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Travel Booking System</h3>
+                        <p class="text-gray-500 mb-4">
+                            Full-stack platform for booking flights and hotels with payment integration.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">React</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">GraphQL</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">About Me</h2>
+                    <p class="text-gray-500 mb-4">
+                        I'm a passionate full-stack developer with 5+ years of experience building web applications. 
+                        I specialize in JavaScript technologies across the entire stack.
+                    </p>
+                    <p class="text-gray-500 mb-4">
+                        My approach combines clean, efficient code with thoughtful UI/UX design to create digital 
+                        products that are both powerful and a joy to use.
+                    </p>
+                    <p class="text-gray-500 mb-6">
+                        When I'm not coding, you can find me contributing to open-source projects, exploring new 
+                        technologies, or sharing knowledge through blog posts and tech talks.
+                    </p>
+                    <a 
+                        href="#" 
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                        Download Resume
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="order-1 md:order-2">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-300 rounded-3xl -rotate-6 filter blur-lg opacity-30 h-full w-full"></div>
+                        <div class="relative bg-white p-1 rounded-3xl shadow-xl overflow-hidden">
+                            <img 
+                                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c569f097-6cf7-4699-8e9d-51047693bca1.png" 
+                                alt="Portrait of Ayush Guleria, a professional full stack developer standing in a modern office environment" 
+                                class="rounded-2xl w-full h-auto object-cover"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-lg text-gray-500 max-w-xl mx-auto">
+                    Have a project in mind or want to discuss potential opportunities?
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-md p-8 md:p-10">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition"
+                                placeholder="Your name"
+                            >
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition"
+                                placeholder="your.email@example.com"
+                            >
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition"
+                            placeholder="What's this about?"
+                        >
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea 
+                            id="message" 
+                            rows="5" 
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition"
+                            placeholder="Your message here..."
+                        ></textarea>
+                    </div>
+                    
+                    <button 
+                        type="submit" 
+                        class="w-full bg-blue-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                    >
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">Ayush Guleria</h3>
+                    <p class="text-gray-400">
+                        Full Stack Developer passionate about creating impactful digital experiences.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition">Skills</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500 text-sm">
+                <p>© 2023 Ayush Guleria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle would go here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate skill bars on scroll
+            const animateSkills = () => {
+                const skillBars = document.querySelectorAll('.skill-bar');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.width = entry.target.style.width;
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                skillBars.forEach(bar => observer.observe(bar));
+            };
+            
+            animateSkills();
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
